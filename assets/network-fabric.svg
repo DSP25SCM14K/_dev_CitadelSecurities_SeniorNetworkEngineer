@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 950" fill="none">
+ <defs>
+  <linearGradient id="fiber" x1="138" y1="250" x2="1046" y2="730" gradientUnits="userSpaceOnUse"><stop stop-color="#4de2c2" stop-opacity=".06"/><stop offset=".5" stop-color="#84ebcd" stop-opacity=".73"/><stop offset="1" stop-color="#c2f56d" stop-opacity=".08"/></linearGradient>
+  <radialGradient id="halo"><stop stop-color="#4de2c2" stop-opacity=".24"/><stop offset="1" stop-color="#4de2c2" stop-opacity="0"/></radialGradient>
+  <pattern id="dots" width="31" height="31" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".7" fill="#cde6d5" fill-opacity=".25"/></pattern>
+  <filter id="blur"><feGaussianBlur stdDeviation="27"/></filter><filter id="shine"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ </defs>
+ <rect width="1200" height="950" fill="url(#dots)" opacity=".45"/><ellipse cx="730" cy="475" rx="380" ry="310" fill="url(#halo)" filter="url(#blur)"/>
+ <g stroke="#8bb8a9" stroke-opacity=".15" stroke-width="1"><path d="M165 156h847v632H165z"/><path d="M165 261h847M165 367h847M165 472h847M165 577h847M165 682h847"/><path d="M271 156v632M377 156v632M483 156v632M589 156v632M695 156v632M801 156v632M907 156v632"/></g>
+ <g stroke="url(#fiber)" stroke-width="1.5">
+  <path d="M52 300h155l89 0 87 121h93l84-121h93l84 0 87 121h92l86-121h170"/>
+  <path d="M52 617h155l89 0 87-120h93l84 120h93l84 0 87-120h92l86 120h170"/>
+  <path d="M151 207h144l88 76h94l84-76h92l84 0 87 76h92l86-76h108"/>
+  <path d="M151 710h144l88-75h94l84 75h92l84 0 87-75h92l86 75h108"/>
+  <path d="M369 421h95l84 0 84 51h93l84-51h93l84 0"/>
+  <path d="M369 497h95l84 0 84-25h93l84 25h93l84 0"/>
+ </g>
+ <g stroke="#c2f56d" stroke-width="2" stroke-linecap="round" filter="url(#shine)"><path class="route route-a" d="M52 300h155l89 0 87 121h93l84-121h93l84 0 87 121h92l86-121h170"/><path class="route route-b" d="M52 617h155l89 0 87-120h93l84 120h93l84 0 87-120h92l86 120h170" opacity=".58"/></g>
+ <g stroke="#8eead0" stroke-opacity=".27"><circle cx="559" cy="300" r="22"/><circle cx="559" cy="300" r="47" stroke-dasharray="2 7"/><circle cx="646" cy="497" r="22"/><circle cx="646" cy="497" r="47" stroke-dasharray="2 7"/></g>
+ <g fill="#c2f56d" filter="url(#shine)"><circle cx="383" cy="421" r="4"/><circle cx="646" cy="300" r="4"/><circle cx="822" cy="421" r="4"/></g>
+ <g fill="#4de2c2" filter="url(#shine)"><circle class="packet packet-a" cx="52" cy="300" r="4"/><circle class="packet packet-b" cx="52" cy="617" r="4"/><circle class="packet packet-c" cx="369" cy="421" r="3.5"/></g>
+ <g stroke="#8eead0" stroke-opacity=".3" stroke-dasharray="3 6"><path d="M646 300v-56M646 497v59M909 421v-61M909 497v62"/></g>
+ <g fill="#b8d1c3" font-family="monospace" font-size="10" letter-spacing="2"><text x="168" y="132">REDUNDANT EXCHANGE CONNECTIVITY</text><text x="740" y="825">LOW LATENCY · OBSERVABLE · RESILIENT</text><text x="523" y="267" fill="#c2f56d">LEAF A</text><text x="611" y="531" fill="#c2f56d">LEAF B</text><text x="884" y="388">TRADING EDGE</text><text x="78" y="274">EXCHANGE A/B</text><text x="78" y="651">MULTICAST PATHS</text></g>
+ <style>
+  .route{stroke-dasharray:2200;stroke-dashoffset:2200;animation:route 6s ease-in-out infinite alternate}
+  .route-b{animation-delay:-3s}
+  .packet{animation:move 5.5s linear infinite}.packet-b{animation-delay:-2.6s}.packet-c{animation-delay:-1.4s}
+  @keyframes route{0%{stroke-dashoffset:2200;opacity:.35}100%{stroke-dashoffset:0;opacity:1}}
+  @keyframes move{0%{transform:translateX(0);opacity:0}10%{opacity:1}88%{opacity:1}100%{transform:translateX(850px);opacity:0}}
+  @media(prefers-reduced-motion:reduce){.route,.packet{animation:none;stroke-dashoffset:0}}
+ </style>
+</svg>
